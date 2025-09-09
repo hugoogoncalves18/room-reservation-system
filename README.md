@@ -13,7 +13,6 @@ A PHP-based project (developed as a university assignment) that allows users to:
 - **PHP** – backend logic.
 - **MySQL** – database to store reservations, rooms, and users.
 - **HTML / CSS / JavaScript** – user interface.
-- *(Optional)*: frameworks or libraries (e.g., Bootstrap, jQuery).
 
 ---
 
@@ -45,5 +44,6 @@ $host = 'localhost';
 $dbname = 'room_reservation_db';
 $user = 'root';
 $pass = '';
+
 
 5. **Access in your browser:**
