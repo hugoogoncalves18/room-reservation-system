@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Utilizador</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background: #45a049;
+        }
+
+        .form-container .error {
+            color: red;
+            font-size: 13px;
+        }
+
+        .form-container a {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .form-container a:hover {
+            color: #388E3C;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registro de Utilizador</h2>
+        <form action="register.php" method="POST" enctype="multipart/form-data">
+            <label for="numero">Número</label>
+            <input type="number" id="numero" name="numero" placeholder="Digite o número do utilizador" required>
+            
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite o nome completo" required>
+            
+            <label for="login">Login</label>
+            <input type="text" id="login" name="login" placeholder="Digite o login" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Digite o email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Crie uma password segura" required>
+            
+            <label for="repetir_password">Confirmar Password</label>
+            <input type="password" id="repetir_password" name="repetir_password" placeholder="Repita a password" required>
+            
+            <label for="profile_image">Imagem de Perfil</label>
+            <input type="file" id="profile_image" name="profile_image" accept="image/*">
+            
+            <button type="submit">Registrar</button>
+        </form>
+        <a href="/resources/users/LoginForm/login.html">Já tem uma conta? Faça login aqui.</a>
+    </div>
+</body>
+</html>

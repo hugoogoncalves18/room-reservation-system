@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Sala</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"], 
+        input[type="number"], 
+        textarea, 
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background-color: #3d8c3f;
+        }
+
+        footer {
+            margin-top: 20px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        back-button {
+            display: inline-block;
+            margin-top: 1em;
+            padding: 0.5em 1em;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        back-button:hover {
+            background-color: #45a049;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Adicionar Nova Sala</h1>
+    <form action="adicionar_sala.php" method="post" enctype="multipart/form-data">
+        <label for="nome">Nome da Sala:</label>
+        <input type="text" name="nome" id="nome" required>
+
+        <label for="capacidade">Capacidade:</label>
+        <input type="number" name="capacidade" id="capacidade" required>
+
+        <label for="descricao">Descrição:</label>
+        <textarea name="descricao" id="descricao" rows="4" placeholder="Digite a descrição da sala"></textarea>
+
+        <label for="imagem">Imagem:</label>
+        <input type="file" name="imagem" id="imagem" accept="image/*">
+
+        <button type="submit" name="submit">Adicionar Sala</button>
+        
+    </form>
+
+    <a href="/admin.php" class="back-button">Voltar ao Dashboard</a>
+    <footer>&copy; 2024 Gestão de Salas</footer>
+</body>
+</html>
